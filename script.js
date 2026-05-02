@@ -8,7 +8,12 @@ let percent = parseFloat(document.getElementById("requiredPercent").value);
 let na = naInput === "" ? 0 : parseInt(naInput);
 
 if(isNaN(total) || isNaN(present) || isNaN(percent)){
-    alert("Please fill all required fields");
+    alert("Please fill required fields");
+    return;
+}
+
+if(total < 0 || na < 0 || present < 0){
+    alert("Negative values allowed nahi hai");
     return;
 }
 
