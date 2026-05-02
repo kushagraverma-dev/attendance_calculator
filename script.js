@@ -1,16 +1,23 @@
 function calculate(){
 
 let total = parseInt(document.getElementById("totalClasses").value);
-let na = parseInt(document.getElementById("naClasses").value);
+let naInput = document.getElementById("naClasses").value;
 let present = parseInt(document.getElementById("presentClasses").value);
 let percent = parseFloat(document.getElementById("requiredPercent").value);
 
-if(isNaN(total) ||  isNaN(present) || isNaN(percent)){
-    alert("Please fill all fields");
+let na = naInput === "" ? 0 : parseInt(naInput);
+
+if(isNaN(total) || isNaN(present) || isNaN(percent)){
+    alert("Please fill all required fields");
     return;
 }
 
 let effectiveTotal = total - na;
+
+if(effectiveTotal <= 0){
+    alert("Invalid NA or Total Classes");
+    return;
+}
 
 let needed = 0;
 
