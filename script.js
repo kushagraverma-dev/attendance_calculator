@@ -5,6 +5,11 @@ let na = parseInt(document.getElementById("naClasses").value);
 let present = parseInt(document.getElementById("presentClasses").value);
 let percent = parseFloat(document.getElementById("requiredPercent").value);
 
+if(isNaN(total) || isNaN(na) || isNaN(present) || isNaN(percent)){
+    alert("Please fill all fields");
+    return;
+}
+
 let effectiveTotal = total - na;
 
 let needed = 0;
