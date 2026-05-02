@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Attendance Calculator</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h2>Attendance Calculator</h2>
+        <h2>Attendance Calculator</h2>
 
-<label>Total Classes</label>
-<input type="number" id="totalClasses">
+        <label>Total Classes</label>
+        <input type="number" id="totalClasses">
 
-<label>NA Classes (Minus from Total)</label>
-<input type="number" id="naClasses">
+        <label>NA Classes (Minus from Total)</label>
+        <input type="number" id="naClasses">
 
-<label>Total Present</label>
-<input type="number" id="presentClasses">
+        <label>Total Present</label>
+        <input type="number" id="presentClasses">
 
-<label>Required Attendance (%)</label>
-<input type="number" id="requiredPercent">
+        <label>Required Attendance (%)</label>
+        <input type="number" id="requiredPercent">
 
-<button onclick="calculate()">Calculate</button>
+        <button onclick="calculate()">Calculate</button>
 
-<label>More Classes Needed</label>
-<input type="text" id="result" disabled>
-<script src="script.js"></script>
-</div>
+        <label>More Classes Needed</label>
+        <input type="text" id="result" disabled>
+        <script src="script.js"></script>
+    </div>
 
 </body>
+
 </html>
